@@ -1,0 +1,8 @@
+{% csrf_token %}
+{% block content %}
+    <ul class="repo-list">
+        {% for repo in repositories %}
+            <li class="repo-item">{{ repo }}</li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
