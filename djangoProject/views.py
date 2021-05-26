@@ -14,7 +14,7 @@ def result(request):
             name = request.POST.get("login")
             url = 'https://api.github.com/graphql'
             json = {'query': '{ user(login:"' + name + '") {repositories(first: 50) { nodes { name }}}}'}
-            api_token = "949a52be341f76e28cd765b3e61da4cc02c3d21b"
+            api_token = ""
             headers = {'Authorization': 'token %s' % api_token}
             r = requests.post(url=url, json=json, headers=headers)
             c = r.json()
